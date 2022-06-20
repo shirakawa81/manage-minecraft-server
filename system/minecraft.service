@@ -1,0 +1,19 @@
+[Unit]
+Description=Minecraft Server: %i
+After=network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/home/minecraft/workspace
+
+User=minecraft
+Group=minecraft
+
+Restart=always
+
+ExecStart=/home/minecraft/scripts/start.sh
+ExecStop=/home/minecraft/scripts/stop.sh
+
+[Install]
+WantedBy=multi-user.target
+

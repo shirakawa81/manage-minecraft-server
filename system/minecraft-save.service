@@ -1,0 +1,9 @@
+[Unit]
+Description=Save minecraft world data.
+
+[Service]
+Type=oneshot
+ExecStart=/home/minecraft/scripts/save.sh
+User=minecraft
+Group=minecraft
+
